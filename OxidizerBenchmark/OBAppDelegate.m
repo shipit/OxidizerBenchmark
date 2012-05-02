@@ -7,6 +7,7 @@
 //
 
 #import "OBAppDelegate.h"
+#import "AFNetworking.h"
 
 @implementation OBAppDelegate
 
@@ -22,8 +23,15 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
+    UINavigationController *nc = [[UINavigationController alloc] init];
+    nc.title = @"OB";
+    
+    self.window.rootViewController = nc;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    [self testComet];
+    
     return YES;
 }
 
@@ -52,6 +60,45 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void) testAF {
+    NSLog(@"testAF()");
+    
+    AFHTTPClient *client = [AFHTTPClient clientWithBaseURL:[NSURL URLWithString:@"http://apple.com"]];
+    [client getPath:@"/" parameters:nil 
+            success:^(AFHTTPRequestOperation *operation , id responseObject) {
+                NSLog(@"SUCCESS response = %@", responseObject);
+            }
+     
+            failure:^(AFHTTPRequestOperation *operation , NSError *error) {
+                NSLog(@"ERROR = %@", error);
+            }];
+
+}
+
+- (void) testComet {
+//    NSArray *connectionList = [NSArray arrayWithObjects:@"long-polling", @"callback-polling", nil];
+    
+    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    [params setObject:@"1" forKey:@"id"];
+    [params setObject:@"/meta/handshake" forKey:@"channel"];
+    [params setObject:@"1.0"             forKey:@"version"];
+    [params setObject:@"long-polling"     forKey:@"supportedConnectionTypes"];
+    
+    AFHTTPClient *client = [AFHTTPClient clientWithBaseURL:[NSURL URLWithString:@"http://lvho.st:8080"]];
+    NSURLRequest *request = [client requestWithMethod:@"POST" path:@"/tophatter/cometd" parameters:params];
+    NSLog(@"REQUEST = %@", request);
+    
+    AFJSONRequestOperation *jsonRequest = 
+    [AFJSONRequestOperation JSONRequestOperationWithRequest:request 
+                                                    success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+                                                        NSLog(@"SUCCESS response = %@", JSON);
+                                                    }
+                                                    failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+                                                        NSLog(@"ERROR = %@", error);
+                                                    }];    
+    [client enqueueHTTPRequestOperation:jsonRequest];
 }
 
 @end
