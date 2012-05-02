@@ -1,0 +1,264 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C475E7FF1551EC520094E27E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C475E7FE1551EC520094E27E /* UIKit.framework */; };
+		C475E8011551EC520094E27E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C475E8001551EC520094E27E /* Foundation.framework */; };
+		C475E8031551EC520094E27E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C475E8021551EC520094E27E /* CoreGraphics.framework */; };
+		C475E8091551EC520094E27E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C475E8071551EC520094E27E /* InfoPlist.strings */; };
+		C475E80B1551EC520094E27E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C475E80A1551EC520094E27E /* main.m */; };
+		C475E80F1551EC530094E27E /* OBAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C475E80E1551EC530094E27E /* OBAppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C475E7FA1551EC520094E27E /* OxidizerBenchmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OxidizerBenchmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C475E7FE1551EC520094E27E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C475E8001551EC520094E27E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C475E8021551EC520094E27E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C475E8061551EC520094E27E /* OxidizerBenchmark-Info.plist */ = {isa = PBXFileReference; path = "OxidizerBenchmark-Info.plist"; sourceTree = "<group>"; };
+		C475E8081551EC520094E27E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C475E80A1551EC520094E27E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C475E80C1551EC520094E27E /* OxidizerBenchmark-Prefix.pch */ = {isa = PBXFileReference; path = "OxidizerBenchmark-Prefix.pch"; sourceTree = "<group>"; };
+		C475E80D1551EC520094E27E /* OBAppDelegate.h */ = {isa = PBXFileReference; path = OBAppDelegate.h; sourceTree = "<group>"; };
+		C475E80E1551EC530094E27E /* OBAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OBAppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C475E7F71551EC520094E27E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C475E7FF1551EC520094E27E /* UIKit.framework in Frameworks */,
+				C475E8011551EC520094E27E /* Foundation.framework in Frameworks */,
+				C475E8031551EC520094E27E /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C475E7EF1551EC520094E27E = {
+			isa = PBXGroup;
+			children = (
+				C475E8041551EC520094E27E /* OxidizerBenchmark */,
+				C475E7FD1551EC520094E27E /* Frameworks */,
+				C475E7FB1551EC520094E27E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C475E7FB1551EC520094E27E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C475E7FA1551EC520094E27E /* OxidizerBenchmark.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C475E7FD1551EC520094E27E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C475E7FE1551EC520094E27E /* UIKit.framework */,
+				C475E8001551EC520094E27E /* Foundation.framework */,
+				C475E8021551EC520094E27E /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C475E8041551EC520094E27E /* OxidizerBenchmark */ = {
+			isa = PBXGroup;
+			children = (
+				C475E80D1551EC520094E27E /* OBAppDelegate.h */,
+				C475E80E1551EC530094E27E /* OBAppDelegate.m */,
+				C475E8051551EC520094E27E /* Supporting Files */,
+			);
+			path = OxidizerBenchmark;
+			sourceTree = "<group>";
+		};
+		C475E8051551EC520094E27E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C475E8061551EC520094E27E /* OxidizerBenchmark-Info.plist */,
+				C475E8071551EC520094E27E /* InfoPlist.strings */,
+				C475E80A1551EC520094E27E /* main.m */,
+				C475E80C1551EC520094E27E /* OxidizerBenchmark-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C475E7F91551EC520094E27E /* OxidizerBenchmark */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C475E8121551EC530094E27E /* Build configuration list for PBXNativeTarget "OxidizerBenchmark" */;
+			buildPhases = (
+				C475E7F61551EC520094E27E /* Sources */,
+				C475E7F71551EC520094E27E /* Frameworks */,
+				C475E7F81551EC520094E27E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OxidizerBenchmark;
+			productName = OxidizerBenchmark;
+			productReference = C475E7FA1551EC520094E27E /* OxidizerBenchmark.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C475E7F11551EC520094E27E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = OB;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = C475E7F41551EC520094E27E /* Build configuration list for PBXProject "OxidizerBenchmark" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C475E7EF1551EC520094E27E;
+			productRefGroup = C475E7FB1551EC520094E27E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C475E7F91551EC520094E27E /* OxidizerBenchmark */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C475E7F81551EC520094E27E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C475E8091551EC520094E27E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C475E7F61551EC520094E27E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C475E80B1551EC520094E27E /* main.m in Sources */,
+				C475E80F1551EC530094E27E /* OBAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C475E8071551EC520094E27E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C475E8081551EC520094E27E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C475E8101551EC530094E27E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C475E8111551EC530094E27E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C475E8131551EC530094E27E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OxidizerBenchmark/OxidizerBenchmark-Prefix.pch";
+				INFOPLIST_FILE = "OxidizerBenchmark/OxidizerBenchmark-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C475E8141551EC530094E27E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OxidizerBenchmark/OxidizerBenchmark-Prefix.pch";
+				INFOPLIST_FILE = "OxidizerBenchmark/OxidizerBenchmark-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C475E7F41551EC520094E27E /* Build configuration list for PBXProject "OxidizerBenchmark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C475E8101551EC530094E27E /* Debug */,
+				C475E8111551EC530094E27E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C475E8121551EC530094E27E /* Build configuration list for PBXNativeTarget "OxidizerBenchmark" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C475E8131551EC530094E27E /* Debug */,
+				C475E8141551EC530094E27E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C475E7F11551EC520094E27E /* Project object */;
+}
