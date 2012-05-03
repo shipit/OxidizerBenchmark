@@ -1,3 +1,6 @@
 [submodule "AFNetworking"]
 	path = AFNetworking
 	url = git://github.com/AFNetworking/AFNetworking.git
+[submodule "oxidizer"]
+	path = oxidizer
+	url = git@github.com:shipit/oxidizer.git
