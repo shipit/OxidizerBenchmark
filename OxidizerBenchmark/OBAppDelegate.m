@@ -8,6 +8,7 @@
 
 #import "OBAppDelegate.h"
 #import "AFNetworking.h"
+#import "Oxidizer.h"
 
 @implementation OBAppDelegate
 
@@ -30,7 +31,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    [self testComet];
+    [self testOX];
     
     return YES;
 }
@@ -101,6 +102,17 @@
                                                         NSLog(@"ERROR = %@", error);
                                                     }];    
     [client enqueueHTTPRequestOperation:jsonRequest];
+}
+
+- (void) testOX {
+    Oxidizer *ox = [Oxidizer initWithUrl:@"http://lvho.st:8080/tophatter/cometd"];
+    [ox handshakeWithSuccess:^(Oxidizer *ox) {
+                         NSLog(@"success");
+                     }
+                     failure:^(Oxidizer *ox) {
+                         NSLog(@"failure");
+                     }];
+    [ox release];
 }
 
 @end

@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C42FC21F1551F75F00037E07 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C42FC21E1551F75F00037E07 /* JSONKit.m */; };
+		C42FC2291552150700037E07 /* OXChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = C42FC2251552150700037E07 /* OXChannel.m */; };
+		C42FC22A1552150700037E07 /* Oxidizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C42FC2281552150700037E07 /* Oxidizer.m */; };
 		C475E7FF1551EC520094E27E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C475E7FE1551EC520094E27E /* UIKit.framework */; };
 		C475E8011551EC520094E27E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C475E8001551EC520094E27E /* Foundation.framework */; };
 		C475E8031551EC520094E27E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C475E8021551EC520094E27E /* CoreGraphics.framework */; };
@@ -29,6 +31,11 @@
 /* Begin PBXFileReference section */
 		C42FC21D1551F75F00037E07 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		C42FC21E1551F75F00037E07 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		C42FC2241552150700037E07 /* OXChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OXChannel.h; sourceTree = "<group>"; };
+		C42FC2251552150700037E07 /* OXChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OXChannel.m; sourceTree = "<group>"; };
+		C42FC2261552150700037E07 /* Oxidizer-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Oxidizer-Prefix.pch"; sourceTree = "<group>"; };
+		C42FC2271552150700037E07 /* Oxidizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Oxidizer.h; sourceTree = "<group>"; };
+		C42FC2281552150700037E07 /* Oxidizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Oxidizer.m; sourceTree = "<group>"; };
 		C475E7FA1551EC520094E27E /* OxidizerBenchmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OxidizerBenchmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C475E7FE1551EC520094E27E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C475E8001551EC520094E27E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -85,6 +92,19 @@
 			name = JSONKit;
 			sourceTree = "<group>";
 		};
+		C42FC2231552150700037E07 /* Oxidizer */ = {
+			isa = PBXGroup;
+			children = (
+				C42FC2241552150700037E07 /* OXChannel.h */,
+				C42FC2251552150700037E07 /* OXChannel.m */,
+				C42FC2261552150700037E07 /* Oxidizer-Prefix.pch */,
+				C42FC2271552150700037E07 /* Oxidizer.h */,
+				C42FC2281552150700037E07 /* Oxidizer.m */,
+			);
+			name = Oxidizer;
+			path = oxidizer/Oxidizer;
+			sourceTree = SOURCE_ROOT;
+		};
 		C475E7EF1551EC520094E27E = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +135,7 @@
 		C475E8041551EC520094E27E /* OxidizerBenchmark */ = {
 			isa = PBXGroup;
 			children = (
+				C42FC2231552150700037E07 /* Oxidizer */,
 				C42FC2211551F76300037E07 /* JSONKit */,
 				C475E8151551ED630094E27E /* AFNetworking */,
 				C475E80D1551EC520094E27E /* OBAppDelegate.h */,
@@ -239,6 +260,8 @@
 				C475E8331551ED630094E27E /* AFXMLRequestOperation.m in Sources */,
 				C475E8341551ED630094E27E /* UIImageView+AFNetworking.m in Sources */,
 				C42FC21F1551F75F00037E07 /* JSONKit.m in Sources */,
+				C42FC2291552150700037E07 /* OXChannel.m in Sources */,
+				C42FC22A1552150700037E07 /* Oxidizer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

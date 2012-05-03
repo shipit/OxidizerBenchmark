@@ -14,5 +14,6 @@
 
 - (void) testAF;
 - (void) testComet;
+- (void) testOX;
 
 @end
