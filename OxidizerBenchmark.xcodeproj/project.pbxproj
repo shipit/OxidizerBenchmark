@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C42FC21F1551F75F00037E07 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C42FC21E1551F75F00037E07 /* JSONKit.m */; };
 		C42FC2291552150700037E07 /* OXChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = C42FC2251552150700037E07 /* OXChannel.m */; };
 		C42FC22A1552150700037E07 /* Oxidizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C42FC2281552150700037E07 /* Oxidizer.m */; };
+		C42FC23015521DD100037E07 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = C42FC22C15521DD100037E07 /* CHANGELOG.md */; };
+		C42FC23115521DD100037E07 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C42FC22E15521DD100037E07 /* JSONKit.m */; };
+		C42FC23215521DD100037E07 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C42FC22F15521DD100037E07 /* README.md */; };
 		C475E7FF1551EC520094E27E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C475E7FE1551EC520094E27E /* UIKit.framework */; };
 		C475E8011551EC520094E27E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C475E8001551EC520094E27E /* Foundation.framework */; };
 		C475E8031551EC520094E27E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C475E8021551EC520094E27E /* CoreGraphics.framework */; };
@@ -29,13 +31,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C42FC21D1551F75F00037E07 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
-		C42FC21E1551F75F00037E07 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		C42FC2241552150700037E07 /* OXChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OXChannel.h; sourceTree = "<group>"; };
 		C42FC2251552150700037E07 /* OXChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OXChannel.m; sourceTree = "<group>"; };
 		C42FC2261552150700037E07 /* Oxidizer-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Oxidizer-Prefix.pch"; sourceTree = "<group>"; };
 		C42FC2271552150700037E07 /* Oxidizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Oxidizer.h; sourceTree = "<group>"; };
 		C42FC2281552150700037E07 /* Oxidizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Oxidizer.m; sourceTree = "<group>"; };
+		C42FC22C15521DD100037E07 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG.md; sourceTree = "<group>"; };
+		C42FC22D15521DD100037E07 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		C42FC22E15521DD100037E07 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		C42FC22F15521DD100037E07 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		C475E7FA1551EC520094E27E /* OxidizerBenchmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OxidizerBenchmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C475E7FE1551EC520094E27E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C475E8001551EC520094E27E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -83,15 +87,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C42FC2211551F76300037E07 /* JSONKit */ = {
-			isa = PBXGroup;
-			children = (
-				C42FC21E1551F75F00037E07 /* JSONKit.m */,
-				C42FC21D1551F75F00037E07 /* JSONKit.h */,
-			);
-			name = JSONKit;
-			sourceTree = "<group>";
-		};
 		C42FC2231552150700037E07 /* Oxidizer */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +98,17 @@
 			);
 			name = Oxidizer;
 			path = oxidizer/Oxidizer;
+			sourceTree = SOURCE_ROOT;
+		};
+		C42FC22B15521DD100037E07 /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				C42FC22C15521DD100037E07 /* CHANGELOG.md */,
+				C42FC22D15521DD100037E07 /* JSONKit.h */,
+				C42FC22E15521DD100037E07 /* JSONKit.m */,
+				C42FC22F15521DD100037E07 /* README.md */,
+			);
+			path = JSONKit;
 			sourceTree = SOURCE_ROOT;
 		};
 		C475E7EF1551EC520094E27E = {
@@ -135,8 +141,8 @@
 		C475E8041551EC520094E27E /* OxidizerBenchmark */ = {
 			isa = PBXGroup;
 			children = (
+				C42FC22B15521DD100037E07 /* JSONKit */,
 				C42FC2231552150700037E07 /* Oxidizer */,
-				C42FC2211551F76300037E07 /* JSONKit */,
 				C475E8151551ED630094E27E /* AFNetworking */,
 				C475E80D1551EC520094E27E /* OBAppDelegate.h */,
 				C475E80E1551EC530094E27E /* OBAppDelegate.m */,
@@ -237,6 +243,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C475E8091551EC520094E27E /* InfoPlist.strings in Resources */,
+				C42FC23015521DD100037E07 /* CHANGELOG.md in Resources */,
+				C42FC23215521DD100037E07 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,9 +267,9 @@
 				C475E8321551ED630094E27E /* AFURLConnectionOperation.m in Sources */,
 				C475E8331551ED630094E27E /* AFXMLRequestOperation.m in Sources */,
 				C475E8341551ED630094E27E /* UIImageView+AFNetworking.m in Sources */,
-				C42FC21F1551F75F00037E07 /* JSONKit.m in Sources */,
 				C42FC2291552150700037E07 /* OXChannel.m in Sources */,
 				C42FC22A1552150700037E07 /* Oxidizer.m in Sources */,
+				C42FC23115521DD100037E07 /* JSONKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
