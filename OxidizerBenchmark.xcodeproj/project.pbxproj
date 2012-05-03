@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C427F88915533C1800439272 /* OXMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C427F88815533C1800439272 /* OXMessage.m */; };
 		C42FC2291552150700037E07 /* OXChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = C42FC2251552150700037E07 /* OXChannel.m */; };
 		C42FC22A1552150700037E07 /* Oxidizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C42FC2281552150700037E07 /* Oxidizer.m */; };
 		C42FC23015521DD100037E07 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = C42FC22C15521DD100037E07 /* CHANGELOG.md */; };
@@ -32,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C427F88715533C1800439272 /* OXMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OXMessage.h; sourceTree = "<group>"; };
+		C427F88815533C1800439272 /* OXMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OXMessage.m; sourceTree = "<group>"; };
 		C42FC2241552150700037E07 /* OXChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OXChannel.h; sourceTree = "<group>"; };
 		C42FC2251552150700037E07 /* OXChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OXChannel.m; sourceTree = "<group>"; };
 		C42FC2261552150700037E07 /* Oxidizer-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Oxidizer-Prefix.pch"; sourceTree = "<group>"; };
@@ -98,6 +101,8 @@
 				C42FC2261552150700037E07 /* Oxidizer-Prefix.pch */,
 				C42FC2271552150700037E07 /* Oxidizer.h */,
 				C42FC2281552150700037E07 /* Oxidizer.m */,
+				C427F88715533C1800439272 /* OXMessage.h */,
+				C427F88815533C1800439272 /* OXMessage.m */,
 			);
 			name = Oxidizer;
 			path = oxidizer/Oxidizer;
@@ -284,6 +289,7 @@
 				C42FC22A1552150700037E07 /* Oxidizer.m in Sources */,
 				C42FC23115521DD100037E07 /* JSONKit.m in Sources */,
 				C42FC240155280F300037E07 /* OBTestController.m in Sources */,
+				C427F88915533C1800439272 /* OXMessage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

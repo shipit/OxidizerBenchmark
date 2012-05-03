@@ -119,9 +119,16 @@ typedef enum {
 }
 
 #pragma mark - Oxidizer delegate
+
 - (void) didHandshakeForConnector:(Oxidizer *)connector withResult:(BOOL)result withParams:(NSDictionary *)params {
     dispatch_async(dispatch_get_main_queue(), ^ {
         [self consoleLog:[NSString stringWithFormat:@"handshake result = %d, params = %@", result, params]];
+    });
+}
+
+- (void) didConnectForConnector:(Oxidizer *)connector withResult:(BOOL)result {
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self consoleLog:[NSString stringWithFormat:@"connect result = %d", result]];
     });
 }
 
