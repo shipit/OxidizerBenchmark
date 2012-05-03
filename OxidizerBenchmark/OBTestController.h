@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OBTestController : UIViewController {
+@protocol OxidizerDelegate;
+
+@interface OBTestController : UIViewController <OxidizerDelegate> {
     
     @private
     UIBarButtonItem *_fpsItem;

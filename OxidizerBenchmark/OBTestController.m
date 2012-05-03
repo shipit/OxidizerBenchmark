@@ -7,6 +7,7 @@
 //
 
 #import "OBTestController.h"
+#import "Oxidizer.h"
 
 typedef enum {
     kHandshakeButton,
@@ -55,6 +56,9 @@ typedef enum {
 
 - (IBAction)handleHandshake:(id)sender {
     [self consoleLog:@"Handshake requested"];
+    Oxidizer *ox = [Oxidizer connector];
+    ox.delegate = self;
+    [ox handshakeWithUrl:@"http://lvho.st:8080/tophatter/cometd"];
 }
 
 - (void) makeChannelSubscribeButton {
@@ -112,6 +116,13 @@ typedef enum {
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma mark - Oxidizer delegate
+- (void) didHandshakeForConnector:(Oxidizer *)connector withResult:(BOOL)result withParams:(NSDictionary *)params {
+    dispatch_async(dispatch_get_main_queue(), ^ {
+        [self consoleLog:[NSString stringWithFormat:@"handshake result = %d, params = %@", result, params]];
+    });
 }
 
 @end
