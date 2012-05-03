@@ -4,3 +4,6 @@
 [submodule "oxidizer"]
 	path = oxidizer
 	url = git@github.com:shipit/oxidizer.git
+[submodule "JSONKit"]
+	path = JSONKit
+	url = git://github.com/johnezang/JSONKit.git
