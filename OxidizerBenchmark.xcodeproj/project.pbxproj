@@ -12,6 +12,7 @@
 		C42FC23015521DD100037E07 /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = C42FC22C15521DD100037E07 /* CHANGELOG.md */; };
 		C42FC23115521DD100037E07 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = C42FC22E15521DD100037E07 /* JSONKit.m */; };
 		C42FC23215521DD100037E07 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C42FC22F15521DD100037E07 /* README.md */; };
+		C42FC240155280F300037E07 /* OBTestController.m in Sources */ = {isa = PBXBuildFile; fileRef = C42FC23F155280F300037E07 /* OBTestController.m */; };
 		C475E7FF1551EC520094E27E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C475E7FE1551EC520094E27E /* UIKit.framework */; };
 		C475E8011551EC520094E27E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C475E8001551EC520094E27E /* Foundation.framework */; };
 		C475E8031551EC520094E27E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C475E8021551EC520094E27E /* CoreGraphics.framework */; };
@@ -40,6 +41,8 @@
 		C42FC22D15521DD100037E07 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		C42FC22E15521DD100037E07 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		C42FC22F15521DD100037E07 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		C42FC23E155280F300037E07 /* OBTestController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBTestController.h; sourceTree = "<group>"; };
+		C42FC23F155280F300037E07 /* OBTestController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBTestController.m; sourceTree = "<group>"; };
 		C475E7FA1551EC520094E27E /* OxidizerBenchmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OxidizerBenchmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C475E7FE1551EC520094E27E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		C475E8001551EC520094E27E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -111,6 +114,15 @@
 			path = JSONKit;
 			sourceTree = SOURCE_ROOT;
 		};
+		C42FC23D15527F8100037E07 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				C42FC23E155280F300037E07 /* OBTestController.h */,
+				C42FC23F155280F300037E07 /* OBTestController.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 		C475E7EF1551EC520094E27E = {
 			isa = PBXGroup;
 			children = (
@@ -141,11 +153,12 @@
 		C475E8041551EC520094E27E /* OxidizerBenchmark */ = {
 			isa = PBXGroup;
 			children = (
+				C475E80D1551EC520094E27E /* OBAppDelegate.h */,
+				C475E80E1551EC530094E27E /* OBAppDelegate.m */,
+				C42FC23D15527F8100037E07 /* UI */,
 				C42FC22B15521DD100037E07 /* JSONKit */,
 				C42FC2231552150700037E07 /* Oxidizer */,
 				C475E8151551ED630094E27E /* AFNetworking */,
-				C475E80D1551EC520094E27E /* OBAppDelegate.h */,
-				C475E80E1551EC530094E27E /* OBAppDelegate.m */,
 				C475E8051551EC520094E27E /* Supporting Files */,
 			);
 			path = OxidizerBenchmark;
@@ -270,6 +283,7 @@
 				C42FC2291552150700037E07 /* OXChannel.m in Sources */,
 				C42FC22A1552150700037E07 /* Oxidizer.m in Sources */,
 				C42FC23115521DD100037E07 /* JSONKit.m in Sources */,
+				C42FC240155280F300037E07 /* OBTestController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

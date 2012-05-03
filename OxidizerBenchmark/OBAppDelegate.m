@@ -9,6 +9,7 @@
 #import "OBAppDelegate.h"
 #import "AFNetworking.h"
 #import "Oxidizer.h"
+#import "OBTestController.h"
 
 @implementation OBAppDelegate
 
@@ -24,14 +25,10 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    UINavigationController *nc = [[UINavigationController alloc] init];
-    nc.title = @"OB";
-    
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:[[OBTestController alloc] init]];
     self.window.rootViewController = nc;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
-    [self testOX];
     
     return YES;
 }
