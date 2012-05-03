@@ -105,13 +105,8 @@
 }
 
 - (void) testOX {
-    Oxidizer *ox = [Oxidizer initWithUrl:@"http://lvho.st:8080/tophatter/cometd"];
-    [ox handshakeWithSuccess:^(Oxidizer *ox) {
-                         NSLog(@"success");
-                     }
-                     failure:^(Oxidizer *ox) {
-                         NSLog(@"failure");
-                     }];
+    Oxidizer *ox = [Oxidizer connector];
+    [ox handshakeWithUrl:@"http://lvho.st:8080/tophatter/cometd"];
     [ox release];
 }
 
