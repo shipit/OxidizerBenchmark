@@ -78,15 +78,17 @@
 }
 
 - (void) testComet {
-//    NSArray *connectionList = [NSArray arrayWithObjects:@"long-polling", @"callback-polling", nil];
+    NSArray *connectionList = [NSArray arrayWithObjects:@"long-polling", @"callback-polling", nil];
     
     NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
     [params setObject:@"1" forKey:@"id"];
     [params setObject:@"/meta/handshake" forKey:@"channel"];
     [params setObject:@"1.0"             forKey:@"version"];
-    [params setObject:@"long-polling"     forKey:@"supportedConnectionTypes"];
+    [params setObject:connectionList     forKey:@"supportedConnectionTypes"];
     
     AFHTTPClient *client = [AFHTTPClient clientWithBaseURL:[NSURL URLWithString:@"http://lvho.st:8080"]];
+    [client setParameterEncoding:AFJSONParameterEncoding];
+    
     NSURLRequest *request = [client requestWithMethod:@"POST" path:@"/tophatter/cometd" parameters:params];
     NSLog(@"REQUEST = %@", request);
     
