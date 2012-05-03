@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "oxidizer/Oxidizer/Oxidizer.m"
-         timestampString = "357763569.206338"
+         timestampString = "357769359.49825"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "77"
-         endingLineNumber = "77"
+         startingLineNumber = "70"
+         endingLineNumber = "70"
          landmarkName = "-processHandshakeSuccessResponse:"
          landmarkType = "5">
       </FileBreakpoint>
