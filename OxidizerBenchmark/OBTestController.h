@@ -9,14 +9,18 @@
 #import <UIKit/UIKit.h>
 
 @protocol OxidizerDelegate;
+@protocol OXChannelDelegate;
 
-@interface OBTestController : UIViewController <OxidizerDelegate,UITextFieldDelegate> {
+@class OXChannel;
+
+@interface OBTestController : UIViewController <OxidizerDelegate,OXChannelDelegate,UITextFieldDelegate> {
     
     @private
     UIBarButtonItem *_fpsItem;
     UIBarButtonItem *_mpsItem;
     UITextView *_consoleTextView;
     NSDateFormatter *_formatter;
+    OXChannel *_channel;
 }
 
 @end

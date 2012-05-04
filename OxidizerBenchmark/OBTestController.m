@@ -31,6 +31,7 @@ typedef enum {
 
     [self makeHandshakeButton];
     [self makeChannelSubscribeButton];
+    [self makeChannelSendButton];
     [self makeChannelInputField];
     [self makeConsoleTextView];
     
@@ -51,7 +52,7 @@ typedef enum {
     [button addTarget:self action:@selector(handleHandshake:) forControlEvents:UIControlEventTouchUpInside];
     
     CGRect frame = self.view.frame;
-    button.frame = CGRectMake(10.0f, frame.size.height - 40.0f - 10 - 90.0f, frame.size.width/2 - 2 * 10.0f, 44.0f);
+    button.frame = CGRectMake(10.0f, frame.size.height - 40.0f - 10 - 90.0f, frame.size.width/3 - 2 * 10.0f, 44.0f);
     [self.view addSubview:button]; 
 }
 
@@ -63,10 +64,20 @@ typedef enum {
     [button addTarget:self action:@selector(handleSubscribe:) forControlEvents:UIControlEventTouchUpInside];    
     
     CGRect frame = self.view.frame;
-    button.frame = CGRectMake(frame.size.width/2 + 10, frame.size.height - 40.0f - 10 - 90.0f, frame.size.width/2 - 2 * 10.0f, 44.0f);
+    button.frame = CGRectMake(frame.size.width/3, frame.size.height - 40.0f - 10 - 90.0f, frame.size.width/3 - 2 * 10.0f, 44.0f);
     [self.view addSubview:button]; 
 }
 
+- (void) makeChannelSendButton {
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [button setTitle:@"Send" forState:UIControlStateNormal];
+    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(handleSend:) forControlEvents:UIControlEventTouchUpInside];    
+    
+    CGRect frame = self.view.frame;
+    button.frame = CGRectMake(frame.size.width * 2/3, frame.size.height - 40.0f - 10 - 90.0f, frame.size.width/3 - 2 * 10.0f, 44.0f);
+    [self.view addSubview:button]; 
+}
 
 - (void) makeChannelInputField {
     CGRect frame = self.view.frame;
@@ -105,7 +116,7 @@ typedef enum {
 }
 
 - (void) consoleLog:(NSString *) message {
-    _consoleTextView.text = [NSString stringWithFormat:@"%@%@ | %@\n", _consoleTextView.text, [_formatter stringFromDate:[NSDate date]], message];
+    _consoleTextView.text = [NSString stringWithFormat:@"%@%@| %@\n", _consoleTextView.text, [_formatter stringFromDate:[NSDate date]], message];
 }
 
 - (void)viewDidUnload
@@ -146,9 +157,20 @@ typedef enum {
     [self consoleLog:[NSString stringWithFormat:@"subscribe request = %@", channelName]];
     [[Oxidizer connector] subscribeToChannel:channelName 
                                      success:^(OXChannel *channel) {
+                                         _channel = channel;
                                          [self consoleLog:[NSString stringWithFormat:@"subscribed to %@", channel.subscription]];
                                      }
                                      failure:nil];
+}
+
+- (IBAction)handleSend:(id)sender {
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+    [dict setObject:@"hello world" forKey:@"message"];
+    
+    UITextField *field = (UITextField *) [self.view viewWithTag:kChannelInputField];
+    NSString *channelName = field.text;
+    
+    [[Oxidizer connector] publishMessageToChannel:channelName withData:dict];
 }
 
 @end
