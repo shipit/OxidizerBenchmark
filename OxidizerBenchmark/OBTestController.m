@@ -8,6 +8,7 @@
 
 #import "OBTestController.h"
 #import "Oxidizer.h"
+#import "OXChannel.h"
 
 typedef enum {
     kHandshakeButton,
@@ -54,18 +55,12 @@ typedef enum {
     [self.view addSubview:button]; 
 }
 
-- (IBAction)handleHandshake:(id)sender {
-    [self consoleLog:@"Handshake requested"];
-    Oxidizer *ox = [Oxidizer connector];
-    ox.delegate = self;
-    [ox handshakeWithUrl:@"http://lvho.st:8080/tophatter/cometd"];
-}
-
 - (void) makeChannelSubscribeButton {
     UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [button setTag:kChannelSubscribeButton];
     [button setTitle:@"Subscribe" forState:UIControlStateNormal];
     [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [button addTarget:self action:@selector(handleSubscribe:) forControlEvents:UIControlEventTouchUpInside];    
     
     CGRect frame = self.view.frame;
     button.frame = CGRectMake(frame.size.width/2 + 10, frame.size.height - 40.0f - 10 - 90.0f, frame.size.width/2 - 2 * 10.0f, 44.0f);
@@ -77,6 +72,7 @@ typedef enum {
     CGRect frame = self.view.frame;
     
     UITextField *field = [[UITextField alloc] initWithFrame:CGRectMake(10.0f, 10.0f, frame.size.width - 2 * 10.0f, 40)];
+    field.delegate = self;
     [field setTag:kChannelInputField];
     
     field.borderStyle = UITextBorderStyleRoundedRect;
@@ -89,6 +85,11 @@ typedef enum {
     field.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     
     [self.view addSubview:field];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)sender {
+    [sender resignFirstResponder];
+    return YES;
 }
 
 - (void) makeConsoleTextView {
@@ -120,6 +121,13 @@ typedef enum {
 
 #pragma mark - Oxidizer delegate
 
+- (IBAction)handleHandshake:(id)sender {
+    [self consoleLog:@"Handshake requested"];
+    Oxidizer *ox = [Oxidizer connector];
+    ox.delegate = self;
+    [ox handshakeWithUrl:@"http://lvho.st:8080/tophatter/cometd"];
+}
+
 - (void) didHandshakeForConnector:(Oxidizer *)connector withResult:(BOOL)result withParams:(NSDictionary *)params {
     dispatch_async(dispatch_get_main_queue(), ^ {
         [self consoleLog:[NSString stringWithFormat:@"handshake result = %d, params = %@", result, params]];
@@ -130,6 +138,17 @@ typedef enum {
     dispatch_async(dispatch_get_main_queue(), ^{
         [self consoleLog:[NSString stringWithFormat:@"connect result = %d", result]];
     });
+}
+
+- (IBAction)handleSubscribe:(id)sender {
+    UITextField *field = (UITextField *) [self.view viewWithTag:kChannelInputField];
+    NSString *channelName = field.text;
+    [self consoleLog:[NSString stringWithFormat:@"subscribe request = %@", channelName]];
+    [[Oxidizer connector] subscribeToChannel:channelName 
+                                     success:^(OXChannel *channel) {
+                                         [self consoleLog:[NSString stringWithFormat:@"subscribed to %@", channel.subscription]];
+                                     }
+                                     failure:nil];
 }
 
 @end

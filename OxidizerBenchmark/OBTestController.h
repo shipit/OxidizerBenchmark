@@ -10,7 +10,7 @@
 
 @protocol OxidizerDelegate;
 
-@interface OBTestController : UIViewController <OxidizerDelegate> {
+@interface OBTestController : UIViewController <OxidizerDelegate,UITextFieldDelegate> {
     
     @private
     UIBarButtonItem *_fpsItem;
