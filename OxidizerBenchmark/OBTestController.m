@@ -158,6 +158,7 @@ typedef enum {
     [[Oxidizer connector] subscribeToChannel:channelName 
                                      success:^(OXChannel *channel) {
                                          _channel = channel;
+                                         _channel.delegate = self;
                                          [self consoleLog:[NSString stringWithFormat:@"subscribed to %@", channel.subscription]];
                                      }
                                      failure:nil];
@@ -171,6 +172,12 @@ typedef enum {
     NSString *channelName = field.text;
     
     [[Oxidizer connector] publishMessageToChannel:channelName withData:dict];
+}
+
+#pragma mark - OXChannel delegate 
+
+- (void) didReceiveMessage:(id)JSON fromChannel:(OXChannel *)channel {
+    NSLog(@"channel = %@, says = %@", channel.subscription, JSON);
 }
 
 @end
