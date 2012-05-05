@@ -117,6 +117,7 @@ typedef enum {
 
 - (void) consoleLog:(NSString *) message {
     _consoleTextView.text = [NSString stringWithFormat:@"%@%@| %@\n", _consoleTextView.text, [_formatter stringFromDate:[NSDate date]], message];
+    [_consoleTextView scrollRangeToVisible:NSMakeRange([_consoleTextView.text length], 0)];
 }
 
 - (void)viewDidUnload
@@ -178,6 +179,10 @@ typedef enum {
 
 - (void) didReceiveMessage:(id)JSON fromChannel:(OXChannel *)channel {
     NSLog(@"channel = %@, says = %@", channel.subscription, JSON);
+    
+    dispatch_async(dispatch_get_main_queue(), ^ {
+        [self consoleLog:[NSString stringWithFormat:@"%@", JSON]];
+    });
 }
 
 @end
