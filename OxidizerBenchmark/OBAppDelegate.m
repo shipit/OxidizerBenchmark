@@ -25,7 +25,7 @@
 {
     self.window = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
     // Override point for customization after application launch.
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:[[OBTestController alloc] init]];
+    UINavigationController *nc = [[[UINavigationController alloc] initWithRootViewController:[[[OBTestController alloc] init]autorelease]] autorelease];
     self.window.rootViewController = nc;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
@@ -78,7 +78,7 @@
 - (void) testComet {
     NSArray *connectionList = [NSArray arrayWithObjects:@"long-polling", @"callback-polling", nil];
     
-    NSMutableDictionary *params = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *params = [[[NSMutableDictionary alloc] init] autorelease];
     [params setObject:@"1" forKey:@"id"];
     [params setObject:@"/meta/handshake" forKey:@"channel"];
     [params setObject:@"1.0"             forKey:@"version"];

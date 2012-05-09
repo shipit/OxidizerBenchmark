@@ -166,7 +166,7 @@ typedef enum {
 }
 
 - (IBAction)handleSend:(id)sender {
-    NSMutableDictionary *dict = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *dict = [[[NSMutableDictionary alloc] init] autorelease];
     [dict setObject:@"hello world" forKey:@"message"];
     
     UITextField *field = (UITextField *) [self.view viewWithTag:kChannelInputField];
