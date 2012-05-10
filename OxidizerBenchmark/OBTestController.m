@@ -6,6 +6,8 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+#import <QuartzCore/QuartzCore.h>
+
 #import "OBTestController.h"
 #import "Oxidizer.h"
 #import "OXChannel.h"
@@ -41,7 +43,15 @@ typedef enum {
     _formatter = [[NSDateFormatter alloc] init];
     [_formatter setDateFormat:@"hh:mm:ss a"];
     
+    CADisplayLink *displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(calculateFps:)];
+    [displayLink addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSDefaultRunLoopMode];
+    
     [self consoleLog:@"System Ready."];
+}
+
+- (void) calculateFps:(CADisplayLink *)sender {
+    double fps = ceil(1 / sender.duration);
+    _fpsItem.title = [NSString stringWithFormat:@"fps:%.02f", fps];
 }
 
 - (void) makeHandshakeButton {

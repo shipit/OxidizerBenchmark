@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C42363AF155B2A7000F2B4F7 /* OXLongPollTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = C42363AE155B2A7000F2B4F7 /* OXLongPollTransport.m */; };
+		C42363B1155C5D7000F2B4F7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C42363B0155C5D7000F2B4F7 /* QuartzCore.framework */; };
 		C427F88915533C1800439272 /* OXMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C427F88815533C1800439272 /* OXMessage.m */; };
 		C42FC2291552150700037E07 /* OXChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = C42FC2251552150700037E07 /* OXChannel.m */; };
 		C42FC22A1552150700037E07 /* Oxidizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C42FC2281552150700037E07 /* Oxidizer.m */; };
@@ -37,6 +38,7 @@
 		C42363AB155B289D00F2B4F7 /* OXTransport.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OXTransport.h; sourceTree = "<group>"; };
 		C42363AD155B2A6F00F2B4F7 /* OXLongPollTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OXLongPollTransport.h; sourceTree = "<group>"; };
 		C42363AE155B2A7000F2B4F7 /* OXLongPollTransport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OXLongPollTransport.m; sourceTree = "<group>"; };
+		C42363B0155C5D7000F2B4F7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		C427F88715533C1800439272 /* OXMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OXMessage.h; sourceTree = "<group>"; };
 		C427F88815533C1800439272 /* OXMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OXMessage.m; sourceTree = "<group>"; };
 		C42FC2241552150700037E07 /* OXChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OXChannel.h; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C42363B1155C5D7000F2B4F7 /* QuartzCore.framework in Frameworks */,
 				C475E7FF1551EC520094E27E /* UIKit.framework in Frameworks */,
 				C475E8011551EC520094E27E /* Foundation.framework in Frameworks */,
 				C475E8031551EC520094E27E /* CoreGraphics.framework in Frameworks */,
@@ -138,6 +141,7 @@
 		C475E7EF1551EC520094E27E = {
 			isa = PBXGroup;
 			children = (
+				C42363B0155C5D7000F2B4F7 /* QuartzCore.framework */,
 				C475E8041551EC520094E27E /* OxidizerBenchmark */,
 				C475E7FD1551EC520094E27E /* Frameworks */,
 				C475E7FB1551EC520094E27E /* Products */,
