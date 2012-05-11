@@ -10,11 +10,25 @@
 
 @implementation PSClient
 
-- (void) connectToUrl:(NSString *) url {
-    
+#pragma mark - Initialization
+
++ (id) initWithServiceProvider:(id <PSServiceProvider>) provider {
+    PSClient *client = [[[PSClient alloc] init] autorelease];
+    [client setProvider:provider];
+    return client;
 }
 
-- (void) disconnectFromUrl:(NSString *) url {
+- (void) setProvider:(id <PSServiceProvider>) provider {
+    _serviceProvider = provider;
+}
+
+#pragma mark - PubSub client
+
+- (void) connect {
+
+}
+
+- (void) disconnect {
     
 }
 
@@ -32,6 +46,13 @@
 
 - (void) addConnectionObserver:(id <PSConnectionObserver>) observer {
     
+}
+
+#pragma mark - Memory management
+
+- (void) dealloc {
+    _serviceProvider = nil;
+    [super dealloc];
 }
 
 @end

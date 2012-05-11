@@ -11,6 +11,14 @@
 		C42363B1155C5D7000F2B4F7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C42363B0155C5D7000F2B4F7 /* QuartzCore.framework */; };
 		C42363C0155CA07300F2B4F7 /* PSChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = C42363BC155CA07300F2B4F7 /* PSChannel.m */; };
 		C42363C1155CA07300F2B4F7 /* PSClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C42363BE155CA07300F2B4F7 /* PSClient.m */; };
+		C42364ED155CB47E00F2B4F7 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C42364EC155CB47E00F2B4F7 /* libicucore.dylib */; };
+		C42364EF155CB48B00F2B4F7 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C42364EE155CB48B00F2B4F7 /* CFNetwork.framework */; };
+		C42364F1155CB49900F2B4F7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C42364F0155CB49900F2B4F7 /* Security.framework */; };
+		C42364FA155CB4DE00F2B4F7 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = C42364F3155CB4DE00F2B4F7 /* base64.c */; };
+		C42364FB155CB4DE00F2B4F7 /* NSData+SRB64Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = C42364F6155CB4DE00F2B4F7 /* NSData+SRB64Additions.m */; };
+		C42364FC155CB4DE00F2B4F7 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C42364F9155CB4DE00F2B4F7 /* SRWebSocket.m */; };
+		C42364FF155CB68000F2B4F7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C42364FE155CB68000F2B4F7 /* SystemConfiguration.framework */; };
+		C4236502155CB95300F2B4F7 /* PSPusherServiceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C4236501155CB95300F2B4F7 /* PSPusherServiceProvider.m */; };
 		C427F88915533C1800439272 /* OXMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C427F88815533C1800439272 /* OXMessage.m */; };
 		C42FC2291552150700037E07 /* OXChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = C42FC2251552150700037E07 /* OXChannel.m */; };
 		C42FC22A1552150700037E07 /* Oxidizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C42FC2281552150700037E07 /* Oxidizer.m */; };
@@ -79,6 +87,20 @@
 		C42364E9155CAC9100F2B4F7 /* PTTargetActionEventListener.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PTTargetActionEventListener.m; path = libPusher/Library/PTTargetActionEventListener.m; sourceTree = SOURCE_ROOT; };
 		C42364EA155CAC9100F2B4F7 /* PTURLRequestOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PTURLRequestOperation.h; path = libPusher/Library/PTURLRequestOperation.h; sourceTree = SOURCE_ROOT; };
 		C42364EB155CAC9100F2B4F7 /* PTURLRequestOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PTURLRequestOperation.m; path = libPusher/Library/PTURLRequestOperation.m; sourceTree = SOURCE_ROOT; };
+		C42364EC155CB47E00F2B4F7 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		C42364EE155CB48B00F2B4F7 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		C42364F0155CB49900F2B4F7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C42364F3155CB4DE00F2B4F7 /* base64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = base64.c; sourceTree = "<group>"; };
+		C42364F4155CB4DE00F2B4F7 /* base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = base64.h; sourceTree = "<group>"; };
+		C42364F5155CB4DE00F2B4F7 /* NSData+SRB64Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+SRB64Additions.h"; sourceTree = "<group>"; };
+		C42364F6155CB4DE00F2B4F7 /* NSData+SRB64Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+SRB64Additions.m"; sourceTree = "<group>"; };
+		C42364F7155CB4DE00F2B4F7 /* SocketRocket-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SocketRocket-Prefix.pch"; sourceTree = "<group>"; };
+		C42364F8155CB4DE00F2B4F7 /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
+		C42364F9155CB4DE00F2B4F7 /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
+		C42364FD155CB57300F2B4F7 /* PSServiceProvider.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSServiceProvider.h; sourceTree = "<group>"; };
+		C42364FE155CB68000F2B4F7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		C4236500155CB95300F2B4F7 /* PSPusherServiceProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSPusherServiceProvider.h; sourceTree = "<group>"; };
+		C4236501155CB95300F2B4F7 /* PSPusherServiceProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSPusherServiceProvider.m; sourceTree = "<group>"; };
 		C427F88715533C1800439272 /* OXMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OXMessage.h; sourceTree = "<group>"; };
 		C427F88815533C1800439272 /* OXMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OXMessage.m; sourceTree = "<group>"; };
 		C42FC2241552150700037E07 /* OXChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OXChannel.h; sourceTree = "<group>"; };
@@ -130,6 +152,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C42364FF155CB68000F2B4F7 /* SystemConfiguration.framework in Frameworks */,
+				C42364F1155CB49900F2B4F7 /* Security.framework in Frameworks */,
+				C42364EF155CB48B00F2B4F7 /* CFNetwork.framework in Frameworks */,
+				C42364ED155CB47E00F2B4F7 /* libicucore.dylib in Frameworks */,
 				C42363B1155C5D7000F2B4F7 /* QuartzCore.framework in Frameworks */,
 				C475E7FF1551EC520094E27E /* UIKit.framework in Frameworks */,
 				C475E8011551EC520094E27E /* Foundation.framework in Frameworks */,
@@ -148,6 +174,9 @@
 				C42363BD155CA07300F2B4F7 /* PSClient.h */,
 				C42363BE155CA07300F2B4F7 /* PSClient.m */,
 				C42363BF155CA07300F2B4F7 /* PSConnectionObserver.h */,
+				C42364FD155CB57300F2B4F7 /* PSServiceProvider.h */,
+				C4236500155CB95300F2B4F7 /* PSPusherServiceProvider.h */,
+				C4236501155CB95300F2B4F7 /* PSPusherServiceProvider.m */,
 			);
 			path = PubSub;
 			sourceTree = SOURCE_ROOT;
@@ -192,6 +221,21 @@
 			name = Pusher;
 			sourceTree = "<group>";
 		};
+		C42364F2155CB4DE00F2B4F7 /* SocketRocket */ = {
+			isa = PBXGroup;
+			children = (
+				C42364F3155CB4DE00F2B4F7 /* base64.c */,
+				C42364F4155CB4DE00F2B4F7 /* base64.h */,
+				C42364F5155CB4DE00F2B4F7 /* NSData+SRB64Additions.h */,
+				C42364F6155CB4DE00F2B4F7 /* NSData+SRB64Additions.m */,
+				C42364F7155CB4DE00F2B4F7 /* SocketRocket-Prefix.pch */,
+				C42364F8155CB4DE00F2B4F7 /* SRWebSocket.h */,
+				C42364F9155CB4DE00F2B4F7 /* SRWebSocket.m */,
+			);
+			name = SocketRocket;
+			path = ../SocketRocket/SocketRocket;
+			sourceTree = "<group>";
+		};
 		C42FC2231552150700037E07 /* Oxidizer */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,7 +277,7 @@
 		C475E7EF1551EC520094E27E = {
 			isa = PBXGroup;
 			children = (
-				C42363B0155C5D7000F2B4F7 /* QuartzCore.framework */,
+				C42364EC155CB47E00F2B4F7 /* libicucore.dylib */,
 				C475E8041551EC520094E27E /* OxidizerBenchmark */,
 				C475E7FD1551EC520094E27E /* Frameworks */,
 				C475E7FB1551EC520094E27E /* Products */,
@@ -251,6 +295,10 @@
 		C475E7FD1551EC520094E27E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C42364FE155CB68000F2B4F7 /* SystemConfiguration.framework */,
+				C42364F0155CB49900F2B4F7 /* Security.framework */,
+				C42364EE155CB48B00F2B4F7 /* CFNetwork.framework */,
+				C42363B0155C5D7000F2B4F7 /* QuartzCore.framework */,
 				C475E7FE1551EC520094E27E /* UIKit.framework */,
 				C475E8001551EC520094E27E /* Foundation.framework */,
 				C475E8021551EC520094E27E /* CoreGraphics.framework */,
@@ -265,6 +313,7 @@
 				C475E80E1551EC530094E27E /* OBAppDelegate.m */,
 				C42363BA155CA07200F2B4F7 /* PubSub */,
 				C42364CA155CAC6700F2B4F7 /* Pusher */,
+				C42364F2155CB4DE00F2B4F7 /* SocketRocket */,
 				C42FC23D15527F8100037E07 /* UI */,
 				C42FC22B15521DD100037E07 /* JSONKit */,
 				C42FC2231552150700037E07 /* Oxidizer */,
@@ -398,6 +447,10 @@
 				C42363AF155B2A7000F2B4F7 /* OXLongPollTransport.m in Sources */,
 				C42363C0155CA07300F2B4F7 /* PSChannel.m in Sources */,
 				C42363C1155CA07300F2B4F7 /* PSClient.m in Sources */,
+				C42364FA155CB4DE00F2B4F7 /* base64.c in Sources */,
+				C42364FB155CB4DE00F2B4F7 /* NSData+SRB64Additions.m in Sources */,
+				C42364FC155CB4DE00F2B4F7 /* SRWebSocket.m in Sources */,
+				C4236502155CB95300F2B4F7 /* PSPusherServiceProvider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

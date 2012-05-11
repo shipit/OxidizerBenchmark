@@ -12,8 +12,4 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-- (void) testAF;
-- (void) testComet;
-- (void) testOX;
-
 @end

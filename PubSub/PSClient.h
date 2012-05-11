@@ -9,14 +9,19 @@
 #import <UIKit/UIKit.h>
 
 @class PSChannel;
+
 @protocol PSConnectionObserver;
+@protocol PSServiceProvider;
 
 @interface PSClient : NSObject {
-    
+    @private
+    id <PSServiceProvider> _serviceProvider;
 }
 
-- (void) connectToUrl:(NSString *) url;
-- (void) disconnectFromUrl:(NSString *) url;
++ (id) initWithServiceProvider:(id <PSServiceProvider>) provider;
+
+- (void) connect;
+- (void) disconnect;
 
 - (void) subscribeToChannel:(NSString *) channelName 
                successBlock:(void (^) (PSChannel *channel)) success 
