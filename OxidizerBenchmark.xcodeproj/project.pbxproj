@@ -46,6 +46,39 @@
 		C42363BD155CA07300F2B4F7 /* PSClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSClient.h; sourceTree = "<group>"; };
 		C42363BE155CA07300F2B4F7 /* PSClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSClient.m; sourceTree = "<group>"; };
 		C42363BF155CA07300F2B4F7 /* PSConnectionObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSConnectionObserver.h; sourceTree = "<group>"; };
+		C42364CB155CAC9100F2B4F7 /* NSDictionary+QueryString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+QueryString.h"; path = "libPusher/Library/NSDictionary+QueryString.h"; sourceTree = SOURCE_ROOT; };
+		C42364CC155CAC9100F2B4F7 /* NSDictionary+QueryString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+QueryString.m"; path = "libPusher/Library/NSDictionary+QueryString.m"; sourceTree = SOURCE_ROOT; };
+		C42364CD155CAC9100F2B4F7 /* NSString+Hashing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSString+Hashing.h"; path = "libPusher/Library/NSString+Hashing.h"; sourceTree = SOURCE_ROOT; };
+		C42364CE155CAC9100F2B4F7 /* NSString+Hashing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSString+Hashing.m"; path = "libPusher/Library/NSString+Hashing.m"; sourceTree = SOURCE_ROOT; };
+		C42364CF155CAC9100F2B4F7 /* PTBlockEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PTBlockEventListener.h; path = libPusher/Library/PTBlockEventListener.h; sourceTree = SOURCE_ROOT; };
+		C42364D0155CAC9100F2B4F7 /* PTBlockEventListener.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PTBlockEventListener.m; path = libPusher/Library/PTBlockEventListener.m; sourceTree = SOURCE_ROOT; };
+		C42364D1155CAC9100F2B4F7 /* PTEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PTEventListener.h; path = libPusher/Library/PTEventListener.h; sourceTree = SOURCE_ROOT; };
+		C42364D2155CAC9100F2B4F7 /* PTJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PTJSON.h; path = libPusher/Library/PTJSON.h; sourceTree = SOURCE_ROOT; };
+		C42364D3155CAC9100F2B4F7 /* PTJSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PTJSON.m; path = libPusher/Library/PTJSON.m; sourceTree = SOURCE_ROOT; };
+		C42364D4155CAC9100F2B4F7 /* PTJSONParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PTJSONParser.h; path = libPusher/Library/PTJSONParser.h; sourceTree = SOURCE_ROOT; };
+		C42364D5155CAC9100F2B4F7 /* PTPusher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PTPusher.h; path = libPusher/Library/PTPusher.h; sourceTree = SOURCE_ROOT; };
+		C42364D6155CAC9100F2B4F7 /* PTPusher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PTPusher.m; path = libPusher/Library/PTPusher.m; sourceTree = SOURCE_ROOT; };
+		C42364D7155CAC9100F2B4F7 /* PTPusherAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PTPusherAPI.h; path = libPusher/Library/PTPusherAPI.h; sourceTree = SOURCE_ROOT; };
+		C42364D8155CAC9100F2B4F7 /* PTPusherAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PTPusherAPI.m; path = libPusher/Library/PTPusherAPI.m; sourceTree = SOURCE_ROOT; };
+		C42364D9155CAC9100F2B4F7 /* PTPusherChannel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PTPusherChannel.h; path = libPusher/Library/PTPusherChannel.h; sourceTree = SOURCE_ROOT; };
+		C42364DA155CAC9100F2B4F7 /* PTPusherChannel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PTPusherChannel.m; path = libPusher/Library/PTPusherChannel.m; sourceTree = SOURCE_ROOT; };
+		C42364DB155CAC9100F2B4F7 /* PTPusherChannelAuthorizationOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PTPusherChannelAuthorizationOperation.h; path = libPusher/Library/PTPusherChannelAuthorizationOperation.h; sourceTree = SOURCE_ROOT; };
+		C42364DC155CAC9100F2B4F7 /* PTPusherChannelAuthorizationOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PTPusherChannelAuthorizationOperation.m; path = libPusher/Library/PTPusherChannelAuthorizationOperation.m; sourceTree = SOURCE_ROOT; };
+		C42364DD155CAC9100F2B4F7 /* PTPusherConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PTPusherConnection.h; path = libPusher/Library/PTPusherConnection.h; sourceTree = SOURCE_ROOT; };
+		C42364DE155CAC9100F2B4F7 /* PTPusherConnection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PTPusherConnection.m; path = libPusher/Library/PTPusherConnection.m; sourceTree = SOURCE_ROOT; };
+		C42364DF155CAC9100F2B4F7 /* PTPusherDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PTPusherDelegate.h; path = libPusher/Library/PTPusherDelegate.h; sourceTree = SOURCE_ROOT; };
+		C42364E0155CAC9100F2B4F7 /* PTPusherErrors.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PTPusherErrors.h; path = libPusher/Library/PTPusherErrors.h; sourceTree = SOURCE_ROOT; };
+		C42364E1155CAC9100F2B4F7 /* PTPusherEvent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PTPusherEvent.h; path = libPusher/Library/PTPusherEvent.h; sourceTree = SOURCE_ROOT; };
+		C42364E2155CAC9100F2B4F7 /* PTPusherEvent.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PTPusherEvent.m; path = libPusher/Library/PTPusherEvent.m; sourceTree = SOURCE_ROOT; };
+		C42364E3155CAC9100F2B4F7 /* PTPusherEventDispatcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PTPusherEventDispatcher.h; path = libPusher/Library/PTPusherEventDispatcher.h; sourceTree = SOURCE_ROOT; };
+		C42364E4155CAC9100F2B4F7 /* PTPusherEventDispatcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PTPusherEventDispatcher.m; path = libPusher/Library/PTPusherEventDispatcher.m; sourceTree = SOURCE_ROOT; };
+		C42364E5155CAC9100F2B4F7 /* PTPusherEventPublisher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PTPusherEventPublisher.h; path = libPusher/Library/PTPusherEventPublisher.h; sourceTree = SOURCE_ROOT; };
+		C42364E6155CAC9100F2B4F7 /* PTPusherMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PTPusherMacros.h; path = libPusher/Library/PTPusherMacros.h; sourceTree = SOURCE_ROOT; };
+		C42364E7155CAC9100F2B4F7 /* PTPusherPresenceChannelDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PTPusherPresenceChannelDelegate.h; path = libPusher/Library/PTPusherPresenceChannelDelegate.h; sourceTree = SOURCE_ROOT; };
+		C42364E8155CAC9100F2B4F7 /* PTTargetActionEventListener.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PTTargetActionEventListener.h; path = libPusher/Library/PTTargetActionEventListener.h; sourceTree = SOURCE_ROOT; };
+		C42364E9155CAC9100F2B4F7 /* PTTargetActionEventListener.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PTTargetActionEventListener.m; path = libPusher/Library/PTTargetActionEventListener.m; sourceTree = SOURCE_ROOT; };
+		C42364EA155CAC9100F2B4F7 /* PTURLRequestOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PTURLRequestOperation.h; path = libPusher/Library/PTURLRequestOperation.h; sourceTree = SOURCE_ROOT; };
+		C42364EB155CAC9100F2B4F7 /* PTURLRequestOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PTURLRequestOperation.m; path = libPusher/Library/PTURLRequestOperation.m; sourceTree = SOURCE_ROOT; };
 		C427F88715533C1800439272 /* OXMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OXMessage.h; sourceTree = "<group>"; };
 		C427F88815533C1800439272 /* OXMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OXMessage.m; sourceTree = "<group>"; };
 		C42FC2241552150700037E07 /* OXChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OXChannel.h; sourceTree = "<group>"; };
@@ -119,6 +152,46 @@
 			path = PubSub;
 			sourceTree = SOURCE_ROOT;
 		};
+		C42364CA155CAC6700F2B4F7 /* Pusher */ = {
+			isa = PBXGroup;
+			children = (
+				C42364CB155CAC9100F2B4F7 /* NSDictionary+QueryString.h */,
+				C42364CC155CAC9100F2B4F7 /* NSDictionary+QueryString.m */,
+				C42364CD155CAC9100F2B4F7 /* NSString+Hashing.h */,
+				C42364CE155CAC9100F2B4F7 /* NSString+Hashing.m */,
+				C42364CF155CAC9100F2B4F7 /* PTBlockEventListener.h */,
+				C42364D0155CAC9100F2B4F7 /* PTBlockEventListener.m */,
+				C42364D1155CAC9100F2B4F7 /* PTEventListener.h */,
+				C42364D2155CAC9100F2B4F7 /* PTJSON.h */,
+				C42364D3155CAC9100F2B4F7 /* PTJSON.m */,
+				C42364D4155CAC9100F2B4F7 /* PTJSONParser.h */,
+				C42364D5155CAC9100F2B4F7 /* PTPusher.h */,
+				C42364D6155CAC9100F2B4F7 /* PTPusher.m */,
+				C42364D7155CAC9100F2B4F7 /* PTPusherAPI.h */,
+				C42364D8155CAC9100F2B4F7 /* PTPusherAPI.m */,
+				C42364D9155CAC9100F2B4F7 /* PTPusherChannel.h */,
+				C42364DA155CAC9100F2B4F7 /* PTPusherChannel.m */,
+				C42364DB155CAC9100F2B4F7 /* PTPusherChannelAuthorizationOperation.h */,
+				C42364DC155CAC9100F2B4F7 /* PTPusherChannelAuthorizationOperation.m */,
+				C42364DD155CAC9100F2B4F7 /* PTPusherConnection.h */,
+				C42364DE155CAC9100F2B4F7 /* PTPusherConnection.m */,
+				C42364DF155CAC9100F2B4F7 /* PTPusherDelegate.h */,
+				C42364E0155CAC9100F2B4F7 /* PTPusherErrors.h */,
+				C42364E1155CAC9100F2B4F7 /* PTPusherEvent.h */,
+				C42364E2155CAC9100F2B4F7 /* PTPusherEvent.m */,
+				C42364E3155CAC9100F2B4F7 /* PTPusherEventDispatcher.h */,
+				C42364E4155CAC9100F2B4F7 /* PTPusherEventDispatcher.m */,
+				C42364E5155CAC9100F2B4F7 /* PTPusherEventPublisher.h */,
+				C42364E6155CAC9100F2B4F7 /* PTPusherMacros.h */,
+				C42364E7155CAC9100F2B4F7 /* PTPusherPresenceChannelDelegate.h */,
+				C42364E8155CAC9100F2B4F7 /* PTTargetActionEventListener.h */,
+				C42364E9155CAC9100F2B4F7 /* PTTargetActionEventListener.m */,
+				C42364EA155CAC9100F2B4F7 /* PTURLRequestOperation.h */,
+				C42364EB155CAC9100F2B4F7 /* PTURLRequestOperation.m */,
+			);
+			name = Pusher;
+			sourceTree = "<group>";
+		};
 		C42FC2231552150700037E07 /* Oxidizer */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +264,7 @@
 				C475E80D1551EC520094E27E /* OBAppDelegate.h */,
 				C475E80E1551EC530094E27E /* OBAppDelegate.m */,
 				C42363BA155CA07200F2B4F7 /* PubSub */,
+				C42364CA155CAC6700F2B4F7 /* Pusher */,
 				C42FC23D15527F8100037E07 /* UI */,
 				C42FC22B15521DD100037E07 /* JSONKit */,
 				C42FC2231552150700037E07 /* Oxidizer */,
@@ -389,6 +463,10 @@
 		C475E8131551EC530094E27E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/libPusher/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OxidizerBenchmark/OxidizerBenchmark-Prefix.pch";
 				INFOPLIST_FILE = "OxidizerBenchmark/OxidizerBenchmark-Info.plist";
@@ -400,6 +478,10 @@
 		C475E8141551EC530094E27E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/libPusher/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OxidizerBenchmark/OxidizerBenchmark-Prefix.pch";
 				INFOPLIST_FILE = "OxidizerBenchmark/OxidizerBenchmark-Info.plist";
