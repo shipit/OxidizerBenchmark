@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		C42363AF155B2A7000F2B4F7 /* OXLongPollTransport.m in Sources */ = {isa = PBXBuildFile; fileRef = C42363AE155B2A7000F2B4F7 /* OXLongPollTransport.m */; };
 		C42363B1155C5D7000F2B4F7 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C42363B0155C5D7000F2B4F7 /* QuartzCore.framework */; };
+		C42363C0155CA07300F2B4F7 /* PSChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = C42363BC155CA07300F2B4F7 /* PSChannel.m */; };
+		C42363C1155CA07300F2B4F7 /* PSClient.m in Sources */ = {isa = PBXBuildFile; fileRef = C42363BE155CA07300F2B4F7 /* PSClient.m */; };
 		C427F88915533C1800439272 /* OXMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C427F88815533C1800439272 /* OXMessage.m */; };
 		C42FC2291552150700037E07 /* OXChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = C42FC2251552150700037E07 /* OXChannel.m */; };
 		C42FC22A1552150700037E07 /* Oxidizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C42FC2281552150700037E07 /* Oxidizer.m */; };
@@ -39,6 +41,11 @@
 		C42363AD155B2A6F00F2B4F7 /* OXLongPollTransport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OXLongPollTransport.h; sourceTree = "<group>"; };
 		C42363AE155B2A7000F2B4F7 /* OXLongPollTransport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OXLongPollTransport.m; sourceTree = "<group>"; };
 		C42363B0155C5D7000F2B4F7 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C42363BB155CA07300F2B4F7 /* PSChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSChannel.h; sourceTree = "<group>"; };
+		C42363BC155CA07300F2B4F7 /* PSChannel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSChannel.m; sourceTree = "<group>"; };
+		C42363BD155CA07300F2B4F7 /* PSClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSClient.h; sourceTree = "<group>"; };
+		C42363BE155CA07300F2B4F7 /* PSClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSClient.m; sourceTree = "<group>"; };
+		C42363BF155CA07300F2B4F7 /* PSConnectionObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSConnectionObserver.h; sourceTree = "<group>"; };
 		C427F88715533C1800439272 /* OXMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OXMessage.h; sourceTree = "<group>"; };
 		C427F88815533C1800439272 /* OXMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OXMessage.m; sourceTree = "<group>"; };
 		C42FC2241552150700037E07 /* OXChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OXChannel.h; sourceTree = "<group>"; };
@@ -100,6 +107,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C42363BA155CA07200F2B4F7 /* PubSub */ = {
+			isa = PBXGroup;
+			children = (
+				C42363BB155CA07300F2B4F7 /* PSChannel.h */,
+				C42363BC155CA07300F2B4F7 /* PSChannel.m */,
+				C42363BD155CA07300F2B4F7 /* PSClient.h */,
+				C42363BE155CA07300F2B4F7 /* PSClient.m */,
+				C42363BF155CA07300F2B4F7 /* PSConnectionObserver.h */,
+			);
+			path = PubSub;
+			sourceTree = SOURCE_ROOT;
+		};
 		C42FC2231552150700037E07 /* Oxidizer */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,6 +190,7 @@
 			children = (
 				C475E80D1551EC520094E27E /* OBAppDelegate.h */,
 				C475E80E1551EC530094E27E /* OBAppDelegate.m */,
+				C42363BA155CA07200F2B4F7 /* PubSub */,
 				C42FC23D15527F8100037E07 /* UI */,
 				C42FC22B15521DD100037E07 /* JSONKit */,
 				C42FC2231552150700037E07 /* Oxidizer */,
@@ -302,6 +322,8 @@
 				C42FC240155280F300037E07 /* OBTestController.m in Sources */,
 				C427F88915533C1800439272 /* OXMessage.m in Sources */,
 				C42363AF155B2A7000F2B4F7 /* OXLongPollTransport.m in Sources */,
+				C42363C0155CA07300F2B4F7 /* PSChannel.m in Sources */,
+				C42363C1155CA07300F2B4F7 /* PSClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
