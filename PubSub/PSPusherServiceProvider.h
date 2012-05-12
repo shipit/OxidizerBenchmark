@@ -10,11 +10,18 @@
 #import "PSServiceProvider.h"
 #import "PTPusherDelegate.h"
 
+@protocol PSServiceMonitorDelegate;
+
 @class PTPusher;
+@class PTPusherConnection;
 
 @interface PSPusherServiceProvider : NSObject <PSServiceProvider, PTPusherDelegate> {
     @private
     PTPusher *_pusher;
+    PTPusherConnection *_connection;
+    NSMutableDictionary *_channelMap;
 }
+
+@property (nonatomic,assign) id <PSServiceMonitorDelegate> delegate;
 
 @end

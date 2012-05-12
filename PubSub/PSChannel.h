@@ -12,6 +12,8 @@
     
 }
 
+@property (retain,readonly,nonatomic) NSString *channelName;
+
 - (void) sendMessage:(id) message;
 - (void) addChannelObserver:(id) observer;
 

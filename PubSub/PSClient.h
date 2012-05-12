@@ -7,15 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PSServiceMonitorDelegate.h"
 
 @class PSChannel;
 
 @protocol PSConnectionObserver;
 @protocol PSServiceProvider;
 
-@interface PSClient : NSObject {
+typedef void (^PSChannelSuccessBlock) (PSChannel *channel);
+typedef void (^PSChannelFailureBlock) (NSString *channelName, NSError *error);
+
+@interface PSClient : NSObject <PSServiceMonitorDelegate> {
     @private
     id <PSServiceProvider> _serviceProvider;
+    NSMutableDictionary *_subscriberMap;
 }
 
 + (id) initWithServiceProvider:(id <PSServiceProvider>) provider;
@@ -24,13 +29,36 @@
 - (void) disconnect;
 
 - (void) subscribeToChannel:(NSString *) channelName 
-               successBlock:(void (^) (PSChannel *channel)) success 
-               failureBlock:(void (^) (NSString *channelName, NSError *error)) failure;
+                    success:(PSChannelSuccessBlock) successBlock 
+                    failure:(PSChannelFailureBlock) failureBlock;
 
 - (void) unsubscribeFromChannel:(NSString *) channelName
-                   successBlock:(void (^) (NSString *channelName)) success 
-                   failureBlock:(void (^) (NSString *channelName, NSError *error)) failure;
+                        success:(PSChannelSuccessBlock) successBlock
+                        failure:(PSChannelFailureBlock) failureBlock;
 
 - (void) addConnectionObserver:(id <PSConnectionObserver>) observer;
 
+@end
+
+typedef enum {
+    kChannelStatePending,
+    kChannelStateSubscribed,
+    kChannelStateInvalid
+} PSChannelState;
+
+@interface PSChannelEntry : NSObject {
+    @private
+    NSString *_channelName;
+    PSChannelSuccessBlock _successBlock;
+    PSChannelFailureBlock _failureBlock;
+}
+
+@property (retain,readonly,nonatomic) NSString *channelName;
+@property (retain,readonly,nonatomic) PSChannelSuccessBlock successBlock;
+@property (retain,readonly,nonatomic) PSChannelFailureBlock failureBlock;
+@property (readwrite,atomic) PSChannelState state;
+
++ (id) initWithChannelName:(NSString *) channelName 
+                   success:(PSChannelSuccessBlock) successBlock
+                   failure:(PSChannelFailureBlock) failureBlock;
 @end

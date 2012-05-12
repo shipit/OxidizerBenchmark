@@ -10,6 +10,8 @@
 
 @implementation PSChannel
 
+@synthesize channelName;
+
 - (void) sendMessage:(id) message {
     
 }

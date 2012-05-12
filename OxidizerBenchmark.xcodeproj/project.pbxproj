@@ -19,6 +19,7 @@
 		C42364FC155CB4DE00F2B4F7 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = C42364F9155CB4DE00F2B4F7 /* SRWebSocket.m */; };
 		C42364FF155CB68000F2B4F7 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C42364FE155CB68000F2B4F7 /* SystemConfiguration.framework */; };
 		C4236502155CB95300F2B4F7 /* PSPusherServiceProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = C4236501155CB95300F2B4F7 /* PSPusherServiceProvider.m */; };
+		C4236509155CE44500F2B4F7 /* PSPTPusherChannelWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = C4236508155CE44500F2B4F7 /* PSPTPusherChannelWrapper.m */; };
 		C427F88915533C1800439272 /* OXMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = C427F88815533C1800439272 /* OXMessage.m */; };
 		C42FC2291552150700037E07 /* OXChannel.m in Sources */ = {isa = PBXBuildFile; fileRef = C42FC2251552150700037E07 /* OXChannel.m */; };
 		C42FC22A1552150700037E07 /* Oxidizer.m in Sources */ = {isa = PBXBuildFile; fileRef = C42FC2281552150700037E07 /* Oxidizer.m */; };
@@ -101,6 +102,9 @@
 		C42364FE155CB68000F2B4F7 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C4236500155CB95300F2B4F7 /* PSPusherServiceProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSPusherServiceProvider.h; sourceTree = "<group>"; };
 		C4236501155CB95300F2B4F7 /* PSPusherServiceProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSPusherServiceProvider.m; sourceTree = "<group>"; };
+		C4236503155CDF7B00F2B4F7 /* PSServiceMonitorDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSServiceMonitorDelegate.h; sourceTree = "<group>"; };
+		C4236507155CE44500F2B4F7 /* PSPTPusherChannelWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSPTPusherChannelWrapper.h; sourceTree = "<group>"; };
+		C4236508155CE44500F2B4F7 /* PSPTPusherChannelWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSPTPusherChannelWrapper.m; sourceTree = "<group>"; };
 		C427F88715533C1800439272 /* OXMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OXMessage.h; sourceTree = "<group>"; };
 		C427F88815533C1800439272 /* OXMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OXMessage.m; sourceTree = "<group>"; };
 		C42FC2241552150700037E07 /* OXChannel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OXChannel.h; sourceTree = "<group>"; };
@@ -177,6 +181,9 @@
 				C42364FD155CB57300F2B4F7 /* PSServiceProvider.h */,
 				C4236500155CB95300F2B4F7 /* PSPusherServiceProvider.h */,
 				C4236501155CB95300F2B4F7 /* PSPusherServiceProvider.m */,
+				C4236503155CDF7B00F2B4F7 /* PSServiceMonitorDelegate.h */,
+				C4236507155CE44500F2B4F7 /* PSPTPusherChannelWrapper.h */,
+				C4236508155CE44500F2B4F7 /* PSPTPusherChannelWrapper.m */,
 			);
 			path = PubSub;
 			sourceTree = SOURCE_ROOT;
@@ -451,6 +458,7 @@
 				C42364FB155CB4DE00F2B4F7 /* NSData+SRB64Additions.m in Sources */,
 				C42364FC155CB4DE00F2B4F7 /* SRWebSocket.m in Sources */,
 				C4236502155CB95300F2B4F7 /* PSPusherServiceProvider.m in Sources */,
+				C4236509155CE44500F2B4F7 /* PSPTPusherChannelWrapper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
