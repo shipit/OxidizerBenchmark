@@ -7,7 +7,6 @@
 //
 
 #import "PSPusherServiceProvider.h"
-#import "PTPusher.h"
 #import "PTPusherChannel.h"
 #import "PTPusherDelegate.h"
 #import "PSServiceMonitorDelegate.h"

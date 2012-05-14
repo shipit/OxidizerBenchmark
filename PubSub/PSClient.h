@@ -8,10 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "PSServiceMonitorDelegate.h"
+#import "PSClientObserver.h"
 
 @class PSChannel;
-
-@protocol PSConnectionObserver;
 @protocol PSServiceProvider;
 
 typedef void (^PSChannelSuccessBlock) (PSChannel *channel);
@@ -21,6 +20,7 @@ typedef void (^PSChannelFailureBlock) (NSString *channelName, NSError *error);
     @private
     id <PSServiceProvider> _serviceProvider;
     NSMutableDictionary *_subscriberMap;
+    NSMutableArray *_connectionObservers;
 }
 
 + (id) initWithServiceProvider:(id <PSServiceProvider>) provider;
@@ -36,7 +36,7 @@ typedef void (^PSChannelFailureBlock) (NSString *channelName, NSError *error);
                         success:(PSChannelSuccessBlock) successBlock
                         failure:(PSChannelFailureBlock) failureBlock;
 
-- (void) addConnectionObserver:(id <PSConnectionObserver>) observer;
+- (void) addConnectionObserver:(id <PSClientObserver>) observer;
 
 @end
 

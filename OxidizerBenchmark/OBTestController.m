@@ -9,8 +9,14 @@
 #import <QuartzCore/QuartzCore.h>
 
 #import "OBTestController.h"
+
+// Oxidizer
 #import "Oxidizer.h"
 #import "OXChannel.h"
+
+// Pusher
+#import "PSClient.h"
+#import "PSPusherServiceProvider.h"
 
 typedef enum {
     kHandshakeButton,
@@ -145,9 +151,13 @@ typedef enum {
 
 - (IBAction)handleHandshake:(id)sender {
     [self consoleLog:@"Handshake requested"];
-    Oxidizer *ox = [Oxidizer connector];
-    ox.delegate = self;
-    [ox handshakeWithUrl:@"http://lvho.st:8080/tophatter/cometd"];
+//    Oxidizer *ox = [Oxidizer connector];
+//    ox.delegate = self;
+//    [ox handshakeWithUrl:@"http://lvho.st:8080/tophatter/cometd"];
+    
+    PSPusherServiceProvider *provider = [[PSPusherServiceProvider alloc] init];
+    PSClient *client = [PSClient initWithServiceProvider:provider];
+    
 }
 
 - (void) didHandshakeForConnector:(Oxidizer *)connector withResult:(BOOL)result withParams:(NSDictionary *)params {

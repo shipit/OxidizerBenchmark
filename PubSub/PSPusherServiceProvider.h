@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PTPusher.h"
 #import "PSServiceProvider.h"
 #import "PTPusherDelegate.h"
 
 @protocol PSServiceMonitorDelegate;
 
-@class PTPusher;
 @class PTPusherConnection;
 
 @interface PSPusherServiceProvider : NSObject <PSServiceProvider, PTPusherDelegate> {

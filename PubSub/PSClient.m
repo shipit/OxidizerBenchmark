@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
+#import "PSClientObserver.h"
 #import "PSClient.h"
 #import "PSServiceProvider.h"
 #import "PSChannel.h"
@@ -23,6 +24,7 @@
 - (id) init {
     self = [super init];
     _subscriberMap = [[NSMutableDictionary alloc] init];
+    _connectionObservers = [[NSMutableArray alloc] init];
     return self;
 }
 
@@ -57,8 +59,8 @@
     [_serviceProvider unsubscribeFromChannel:channelName];
 }
 
-- (void) addConnectionObserver:(id <PSConnectionObserver>) observer {
-    
+- (void) addConnectionObserver:(id <PSClientObserver>) observer {
+    [_connectionObservers addObject:observer];
 }
 
 - (void) addToPendingSubcriberList:(PSChannelEntry *) entry {
@@ -75,11 +77,17 @@
 #pragma mark - PSServiceMonitorDelegate
 
 - (void) didConnectProvider: (PSPusherServiceProvider *) provider {
-    
+    for (int i = 0; i < [_connectionObservers count]; i++) {
+        id <PSClientObserver> observer = [_connectionObservers objectAtIndex:i];
+        [observer didConnectWithClient:self];
+    }
 }
 
 - (void) didDisconnectProvider: (PSPusherServiceProvider *) provider {
-    
+    for (int i = 0; i < [_connectionObservers count]; i++) {
+        id <PSClientObserver> observer = [_connectionObservers objectAtIndex:i];
+        [observer didDisconnectWithClient:self];
+    }
 }
 
 - (void) didSubscribeChannel: (PSChannel *) channel withProvider:(PSPusherServiceProvider *) provider {
