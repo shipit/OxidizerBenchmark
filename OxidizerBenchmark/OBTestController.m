@@ -16,6 +16,8 @@
 
 // Pusher
 #import "PSClient.h"
+#import "PSChannel.h"
+
 #import "PSPusherServiceProvider.h"
 #import "PSClientObserver.h"
 
@@ -157,9 +159,9 @@ typedef enum {
 //    [ox handshakeWithUrl:@"http://lvho.st:8080/tophatter/cometd"];
     
     PSPusherServiceProvider *provider = [[PSPusherServiceProvider alloc] init];
-    PSClient *client = [PSClient initWithServiceProvider:provider];
-    [client addConnectionObserver:self];
-    [client connect];
+    _client = [PSClient initWithServiceProvider:provider];
+    [_client addConnectionObserver:self];
+    [_client connect];
 }
 
 - (void) didHandshakeForConnector:(Oxidizer *)connector withResult:(BOOL)result withParams:(NSDictionary *)params {
@@ -178,13 +180,16 @@ typedef enum {
     UITextField *field = (UITextField *) [self.view viewWithTag:kChannelInputField];
     NSString *channelName = field.text;
     [self consoleLog:[NSString stringWithFormat:@"subscribe request = %@", channelName]];
-    [[Oxidizer connector] subscribeToChannel:channelName 
-                                     success:^(OXChannel *channel) {
-                                         _channel = channel;
-                                         _channel.delegate = self;
-                                         [self consoleLog:[NSString stringWithFormat:@"subscribed to %@", channel.subscription]];
-                                     }
-                                     failure:nil];
+//    [[Oxidizer connector] subscribeToChannel:channelName 
+//                                     success:^(OXChannel *channel) {
+//                                         _channel = channel;
+//                                         _channel.delegate = self;
+//                                         [self consoleLog:[NSString stringWithFormat:@"subscribed to %@", channel.subscription]];
+//                                     }
+//                                     failure:nil];
+    [_client subscribeToChannel:channelName 
+                        success:^(PSChannel *channel) { NSLog(@"hurrr!!! %@", channel);} 
+                        failure:^(NSString *channelName, NSError *error) { NSLog(@"damn! %@", error);} ];
 }
 
 - (IBAction)handleSend:(id)sender {

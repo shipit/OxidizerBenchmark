@@ -13,6 +13,7 @@
 @protocol PSClientObserver;
 
 @class OXChannel;
+@class PSClient;
 
 @interface OBTestController : UIViewController <OxidizerDelegate,OXChannelDelegate,UITextFieldDelegate,PSClientObserver> {
     
@@ -22,6 +23,7 @@
     UITextView *_consoleTextView;
     NSDateFormatter *_formatter;
     OXChannel *_channel;
+    PSClient *_client;
 }
 
 @end
