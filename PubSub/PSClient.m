@@ -18,6 +18,7 @@
 + (id) initWithServiceProvider:(id <PSServiceProvider>) provider {
     PSClient *client = [[[PSClient alloc] init] autorelease];
     [client setProvider:provider];
+
     return client;
 }
 
@@ -30,6 +31,7 @@
 
 - (void) setProvider:(id <PSServiceProvider>) provider {
     _serviceProvider = provider;
+    [_serviceProvider setServiceMonitorDelegate:self];
 }
 
 #pragma mark - PubSub client

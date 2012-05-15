@@ -10,10 +10,11 @@
 
 @protocol OxidizerDelegate;
 @protocol OXChannelDelegate;
+@protocol PSClientObserver;
 
 @class OXChannel;
 
-@interface OBTestController : UIViewController <OxidizerDelegate,OXChannelDelegate,UITextFieldDelegate> {
+@interface OBTestController : UIViewController <OxidizerDelegate,OXChannelDelegate,UITextFieldDelegate,PSClientObserver> {
     
     @private
     UIBarButtonItem *_fpsItem;

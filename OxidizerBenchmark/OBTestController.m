@@ -17,6 +17,7 @@
 // Pusher
 #import "PSClient.h"
 #import "PSPusherServiceProvider.h"
+#import "PSClientObserver.h"
 
 typedef enum {
     kHandshakeButton,
@@ -157,7 +158,8 @@ typedef enum {
     
     PSPusherServiceProvider *provider = [[PSPusherServiceProvider alloc] init];
     PSClient *client = [PSClient initWithServiceProvider:provider];
-    
+    [client addConnectionObserver:self];
+    [client connect];
 }
 
 - (void) didHandshakeForConnector:(Oxidizer *)connector withResult:(BOOL)result withParams:(NSDictionary *)params {
@@ -202,6 +204,14 @@ typedef enum {
     
     dispatch_async(dispatch_get_main_queue(), ^ {
         [self consoleLog:[NSString stringWithFormat:@"%@", JSON]];
+    });
+}
+
+#pragma mark - PSClientObserver
+
+- (void) didConnectWithClient:(PSClient *)client {
+    dispatch_async(dispatch_get_main_queue(), ^ {
+        [self consoleLog:[NSString stringWithFormat:@"provider connected %@", client]];
     });
 }
 

@@ -22,6 +22,6 @@
     NSMutableDictionary *_channelMap;
 }
 
-@property (nonatomic,assign) id <PSServiceMonitorDelegate> delegate;
+@property (nonatomic,retain) id <PSServiceMonitorDelegate> delegate;
 
 @end

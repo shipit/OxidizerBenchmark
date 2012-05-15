@@ -31,7 +31,7 @@
 #pragma mark - PSServiceProvider
 
 - (void) connect {
-    _pusher = [PTPusher pusherWithKey:kPusherKey connectAutomatically:NO encrypted:NO];
+    _pusher = [[PTPusher pusherWithKey:kPusherKey connectAutomatically:NO encrypted:NO] retain];
     _pusher.delegate = self;
     [_pusher connect];
 }
@@ -54,8 +54,8 @@
     }
 }
 
-- (void) setServiceMonitorDelegate:(id <PSServiceMonitorDelegate>) delegate {
-    
+- (void) setServiceMonitorDelegate:(id <PSServiceMonitorDelegate>) serviceMonitorDelegate {
+    self.delegate = serviceMonitorDelegate;
 }
 
 #pragma mark - PTPusherDelegate
